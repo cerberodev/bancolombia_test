@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test_project/utils/utils.dart';
 import 'package:test_project/widgets/bancolombia_app_bar.dart';
 
+import 'animated_container_page.dart';
 import 'card_page.dart';
 import 'circle_avatar_page.dart';
 import 'drop_down_page.dart';
@@ -92,6 +93,15 @@ class BancolombiaHomePage extends StatelessWidget {
                 Utils().goToScreen(
                   context,
                   MiniWidgetsPage(),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text("AnimatedContainer"),
+              onPressed: () {
+                Utils().goToScreen(
+                  context,
+                  AnimatedContainerPage(),
                 );
               },
             ),
