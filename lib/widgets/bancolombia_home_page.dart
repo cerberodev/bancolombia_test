@@ -3,6 +3,7 @@ import 'package:test_project/utils/utils.dart';
 import 'package:test_project/widgets/bancolombia_app_bar.dart';
 
 import 'card_page.dart';
+import 'drop_down_page.dart';
 import 'image_page.dart';
 
 class BancolombiaHomePage extends StatelessWidget {
@@ -63,6 +64,15 @@ class BancolombiaHomePage extends StatelessWidget {
                       ],
                     ));
                 print(result);
+              },
+            ),
+            RaisedButton(
+              child: Text("DropDown"),
+              onPressed: () {
+                Utils().goToScreen(
+                  context,
+                  DropDownPage(),
+                );
               },
             ),
           ],
