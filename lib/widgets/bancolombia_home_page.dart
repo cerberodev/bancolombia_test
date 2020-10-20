@@ -3,8 +3,10 @@ import 'package:test_project/utils/utils.dart';
 import 'package:test_project/widgets/bancolombia_app_bar.dart';
 
 import 'card_page.dart';
+import 'circle_avatar_page.dart';
 import 'drop_down_page.dart';
 import 'image_page.dart';
+import 'mini_widgets_page.dart';
 
 class BancolombiaHomePage extends StatelessWidget {
   @override
@@ -72,6 +74,24 @@ class BancolombiaHomePage extends StatelessWidget {
                 Utils().goToScreen(
                   context,
                   DropDownPage(),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text("CircleAvatar"),
+              onPressed: () {
+                Utils().goToScreen(
+                  context,
+                  CircleAvatarPage(),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text("Slider - CheckBox - Switch"),
+              onPressed: () {
+                Utils().goToScreen(
+                  context,
+                  MiniWidgetsPage(),
                 );
               },
             ),
