@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:test_project/widgets/bancolombia_home_page.dart';
-import 'bancolombia_splash_page.dart';
+import 'constants/routes.dart';
 import 'constants/theme.dart';
 
 void main() {
@@ -14,6 +15,17 @@ class MyApp extends StatelessWidget {
       title: 'Test Project',
       theme: themeData,
       home: BancolombiaHomePage(),
+      //routes: routes,
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        //Locale('en'),
+        Locale('es'),
+        //Locale('es','CO'),
+      ],
     );
   }
 }
