@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'bancolombia_app_bar.dart';
+
 class AnimatedContainerPage extends StatefulWidget {
   @override
   _AnimatedContainerPageState createState() => _AnimatedContainerPageState();
@@ -15,6 +17,9 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: BancolombiaAppBar(
+        appBarTitle: "Animated Container",
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           height = random.nextInt(256).toDouble();
@@ -27,7 +32,7 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
       body: Center(
         child: AnimatedContainer(
           curve: Curves.decelerate,
-          duration: Duration(seconds: 3),
+          duration: Duration(milliseconds: 50),
           height: height,
           width: width,
           color: color,

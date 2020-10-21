@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_project/utils/utils.dart';
 import 'package:test_project/widgets/bancolombia_app_bar.dart';
+import 'package:test_project/widgets/shared_hive.dart';
 
 import 'animated_container_page.dart';
 import 'card_page.dart';
@@ -102,6 +103,15 @@ class BancolombiaHomePage extends StatelessWidget {
                 Utils().goToScreen(
                   context,
                   AnimatedContainerPage(),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text("Shared Hive"),
+              onPressed: () {
+                Utils().goToScreen(
+                  context,
+                  SharedHivePage(),
                 );
               },
             ),

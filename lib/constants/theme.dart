@@ -6,3 +6,10 @@ ThemeData themeData = ThemeData(
   accentColor: BancolombiaColors.brilliantRed,
   visualDensity: VisualDensity.adaptivePlatformDensity,
 );
+
+ThemeData darkthemeData = ThemeData(
+  brightness: Brightness.dark,
+  //primarySwatch: Colors.yellow,
+  accentColor: BancolombiaColors.brilliantRed,
+  visualDensity: VisualDensity.adaptivePlatformDensity,
+);

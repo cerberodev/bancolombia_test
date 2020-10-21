@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:test_project/widgets/bancolombia_home_page.dart';
-import 'constants/routes.dart';
 import 'constants/theme.dart';
 
-void main() {
+const darkModeBox = 'darkModeTutorial';
+void main() async {
+  await Hive.initFlutter();
+  await Hive.openBox(darkModeBox);
   runApp(MyApp());
 }
 
@@ -14,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Test Project',
       theme: themeData,
+      darkTheme: ThemeData(brightness: Brightness.dark),
       home: BancolombiaHomePage(),
       //routes: routes,
       localizationsDelegates: [

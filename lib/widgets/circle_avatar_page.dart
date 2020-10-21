@@ -15,12 +15,14 @@ class CircleAvatarPage extends StatelessWidget {
               firstDate: DateTime.parse("2012-12-12"),
               lastDate: DateTime.parse("2015-12-12"));
         },
-        child: Container(
-          child: CircleAvatar(
-            backgroundColor: Colors.red,
-            radius: 55,
-            backgroundImage: AssetImage(
-              "assets/logo.png",
+        child: Center(
+          child: Container(
+            child: CircleAvatar(
+              backgroundColor: Colors.red,
+              radius: 55,
+              backgroundImage: AssetImage(
+                "assets/logo.png",
+              ),
             ),
           ),
         ),

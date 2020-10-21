@@ -15,35 +15,37 @@ class _DropDownPageState extends State<DropDownPage> {
       appBar: BancolombiaAppBar(
         appBarTitle: "DropDown",
       ),
-      body: Container(
-        child: Theme(
-          data: ThemeData(
-            canvasColor: Colors.red,
-          ),
-          child: DropdownButton(
-            onChanged: (value) {
-              _value = value;
-              setState(() {});
-            },
-            value: _value,
-            items: [
-              DropdownMenuItem(
-                child: Text("Valor 1"),
-                value: 1,
-              ),
-              DropdownMenuItem(
-                child: Text("Valor 2"),
-                value: 2,
-              ),
-              DropdownMenuItem(
-                child: Text("Valor 3"),
-                value: 3,
-              ),
-              DropdownMenuItem(
-                child: Text("Valor 4"),
-                value: 4,
-              ),
-            ],
+      body: Center(
+        child: Container(
+          child: Theme(
+            data: ThemeData(
+              canvasColor: Colors.red,
+            ),
+            child: DropdownButton(
+              onChanged: (value) {
+                _value = value;
+                setState(() {});
+              },
+              value: _value,
+              items: [
+                DropdownMenuItem(
+                  child: Text("Valor 1"),
+                  value: 1,
+                ),
+                DropdownMenuItem(
+                  child: Text("Valor 2"),
+                  value: 2,
+                ),
+                DropdownMenuItem(
+                  child: Text("Valor 3"),
+                  value: 3,
+                ),
+                DropdownMenuItem(
+                  child: Text("Valor 4"),
+                  value: 4,
+                ),
+              ],
+            ),
           ),
         ),
       ),

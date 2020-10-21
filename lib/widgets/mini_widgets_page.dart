@@ -17,6 +17,7 @@ class _MiniWidgetsPageState extends State<MiniWidgetsPage> {
         appBarTitle: "Widgets",
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           SliderTheme(
             data: SliderThemeData(
